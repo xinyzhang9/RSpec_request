@@ -1,0 +1,18 @@
+<h1>Create new Ninja</h1>
+<p id="notice"><%= notice %></p>
+<p id="error"><%= flash[:error] %></p>
+<%= form_for(@ninja) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<%= link_to 'Back', ninjas_path %>
